@@ -1,0 +1,39 @@
+<div class="search">
+  <h1>Need Music?</h1>
+  <p>Используй SpotifyFinder для поиска музыки.</p>
+  <form>
+    <input
+      class="search__input"
+      type="text"
+      name="searchStr"
+      [(ngModel)]="searchStr"
+      (keyup)="searchMusic()"
+      placeholder="Search Artist..."
+    />
+  </form>
+
+  <div *ngIf="searchRes">
+    <div *ngFor="let res of searchRes">
+      <div class="artists" *ngIf="res.images.length > 0">
+        <div class="artists__artist">
+          <a routerLink="/artist/{{ res.id }}"
+            ><img
+              class="artists__artist-avatar"
+              src="{{ res.images[2].url }}"
+              alt="Аватар"
+            />
+          </a>
+          <div class="artists__artist-info">
+            <a class="artists__artist-ref" routerLink="/artist/{{ res.id }}">{{
+              res.name
+            }}</a>
+            <div>
+              <strong>Genres: </strong>
+              <span *ngFor="let genre of res.genres">{{ genre }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

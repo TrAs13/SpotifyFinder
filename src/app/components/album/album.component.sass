@@ -1,0 +1,32 @@
+@import '../../../styles'
+.album
+    margin: $margin-page
+
+    &__tracks
+        display: grid
+        grid-gap: $margin-gap
+
+    &__track
+        border-radius: $border-radius
+        background-color: $secondary-color
+        padding: 5px $margin-page
+
+    &__button
+        border-radius: $border-radius
+        background-color: $secondary-color
+        padding: 5px $margin-page
+        border-color: $primary-color
+        border-style: solid
+    &__ref
+        text-decoration: none
+        color: $primary-color
+
+@media screen and (min-width: 200px)
+    .album__avatar
+        width: 160px
+        height: 160px
+
+@media screen and (min-width: 360px)
+    .album__avatar
+        width: 320px
+        height: 320px

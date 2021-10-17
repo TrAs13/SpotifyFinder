@@ -1,0 +1,38 @@
+@import '../../../styles'
+.artist
+    margin: $margin-page
+
+    &__albums
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+
+        &-info
+            display: flex
+            justify-content: space-between
+
+        &-ref
+            text-decoration: none
+            color: $primary-color
+
+        &-name
+            width: 50%
+
+@media screen and (min-width: 260px)
+    .artist__avatar, .artist__albums-img
+        width: 220px
+        height: 220px
+    .artist__albums-info
+        width: 220px
+
+@media screen and (min-width: 360px)
+    .artist__avatar, .artist__albums-img
+        width: 300px
+        height: 300px
+    .artist__albums-info
+        width: 300px
+
+    @media screen and (min-width: 700px)
+    .artist__albums-el
+        margin-right: 20px
