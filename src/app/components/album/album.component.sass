@@ -1,0 +1,67 @@
+@import '../../../styles'
+
+.page__album
+    margin: $primary-margin
+
+.album
+    &__visited-button
+        padding: 5px $primary-margin
+        margin-bottom: $primary-margin
+
+.visited-button
+    border-radius: 3px
+    background-color: $secondary-color
+    border-color: $third-color
+    border-style: solid
+    color: $third-color
+
+.tracks
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr))
+    grid-row-gap: 20px
+    grid-column-gap: 80px
+
+.track
+    border-bottom: 1px solid white
+    display: grid
+    align-items: center
+    grid-template-areas: "number name button"
+    grid-template-columns: 30px auto 1fr
+    grid-template-rows: 1fr
+
+    &__button
+        justify-self: end
+        grid-area: button
+
+    &__number
+        margin-left: 5px
+        grid-area: number
+
+    &__name
+        grid-area: name
+
+.track--active
+    color: $third-color
+    border-bottom-color: $third-color
+
+.button
+    color: $third-color
+    height: 48px !important
+    width: 48px !important
+    font-size: 48px !important
+    vertical-align: middle
+
+@media (min-width: 0px)
+    .track:hover
+        background-color: $hover-color
+        border-radius: 3px
+
+@media screen and (min-width: 200px)
+    .album__avatar
+        width: 160px
+        height: 160px
+
+@media screen and (min-width: 360px)
+    .album__avatar
+        width: 320px
+        height: 320px
