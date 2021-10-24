@@ -8,8 +8,6 @@
 - Basic CSS
 - CSS Flexbox
 - CSS Grid
-- Basic JavaScript
-- ES6
 - TypeScript
 - Angular
 - Spotify API
