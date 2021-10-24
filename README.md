@@ -1,4 +1,18 @@
-# SpotifyFinderTemp
+## What is the app?
+
+Это веб-приложение использующее Spotify API для поиска и воспроизведения превью песен музыкальных исполнителей и их альбомов, без регистрации на Spotify.
+
+## Technologies
+
+- Basic HTML and HTML5
+- Basic CSS
+- CSS Flexbox
+- CSS Grid
+- Basic JavaScript
+- ES6
+- TypeScript
+- Angular
+- Spotify API
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
 
