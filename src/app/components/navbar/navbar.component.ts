@@ -8,7 +8,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavbarComponent {
   languages = ['en', 'ru'];
-  index = 0;
+  index = 0; // свойство лишнее, эта инфа есть уже в translate внутри какой сейчас язык
+  // translate.currentLang
   constructor(public translate: TranslateService) {}
 
   changeLanguage() {
