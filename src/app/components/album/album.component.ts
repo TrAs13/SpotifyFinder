@@ -1,29 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { SpotifyService } from '../../services/spotify.service';
-import { Artist } from '../../../Artist';
-import { Album } from '../../../Album';
-import { ActivatedRoute } from '@angular/router';
-import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'album',
-  templateUrl: 'album.component.html',
-  styleUrls: ['album.component.sass'],
+  selector: 'app-album',
+  templateUrl: './album.component.html',
+  styleUrls: ['./album.component.sass'],
 })
-export class AlbumComponent {
-  id!: string;
-  album!: Album[] | any;
-
-  constructor(
-    private _spotifyService: SpotifyService,
-    private _route: ActivatedRoute
-  ) {}
-
-  ngOnInit() {
-    this._route.params.pipe(map((params) => params['id'])).subscribe((id) => {
-      this._spotifyService.getAlbum(id).subscribe((album: any) => {
-        this.album = album;
-      });
-    });
-  }
-}
+export class AlbumComponent {}

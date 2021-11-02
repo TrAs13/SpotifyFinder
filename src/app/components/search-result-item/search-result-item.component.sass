@@ -1,0 +1,31 @@
+@import '../../../styles'
+
+.list-artists
+    &__artist
+        padding: 5px
+        margin-top: 10px
+
+.artist
+    display: grid
+    grid-auto-columns: 100px 1fr
+    align-items: center
+    justify-content: center
+    grid-template-areas: "avatar info"
+
+    &__avatar
+        grid-area: avatar
+        width: 60px
+        height: 60px
+
+    &__info
+        grid-area: info
+
+    &__ref
+        @include hrefs($primary-color)
+
+@media (min-width: 0px)
+    .list-artists__artist:hover
+        width: 100%
+        background-color: $hover-color
+        padding-left: $primary-margin
+        margin-left: -$primary-margin

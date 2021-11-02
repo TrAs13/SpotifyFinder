@@ -1,0 +1,13 @@
+@import '../../../styles'
+
+.artist
+    &__albums
+        display: grid
+        justify-content: center
+        grid-template-columns: repeat(auto-fill, 1fr)
+        grid-row-gap: $primary-margin
+        grid-column-gap: $primary-margin
+
+@media screen and (min-width: 360px)
+    .artist__albums
+        grid-template-columns: repeat(auto-fill, 300px)

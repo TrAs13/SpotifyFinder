@@ -1,19 +1,31 @@
 @import ../../../styles
+
 .navbar
-    background-color: black
-    color: $primary-color
-    display: flex
+    background-color: $secondary-color
+    display: grid
+    grid-auto-columns: auto auto 1fr
     align-items: center
     height: 5vh
+    grid-template-areas: "logo about button-lang"
 
-    .navbar_project-name
-        margin-left: $margin-page
+    .navbar__project-name
+        margin-left: $primary-margin
+        @include hrefs($primary-color)
+        grid-area: logo
 
-    .navbar__list
-        display: flex
-        list-style-type: none
+    .navbar__about
+        margin-left: $primary-margin
+        @include hrefs($primary-color)
+        grid-area: about
 
-        .navbar__list_el
-            margin-left: $margin-page
-            text-decoration: none
-            color: $primary-color
+    .button-language
+        justify-self: right
+        margin-right: $primary-margin
+        grid-area: button-lang
+
+.button-language
+    border-radius: 3px
+    background-color: $secondary-color
+    border-color: $third-color
+    border-style: solid
+    color: $third-color

@@ -1,0 +1,13 @@
+{
+  "About": "About",
+  "BUTTON": "EN",
+  "Need_music": "Need Music?",
+  "Genres": "Genres:",
+  "Using": "Using SpotifyFinder for searching music.",
+  "Albums": "Albums",
+  "Release_date": "Release date:",
+  "What": "What is the app?",
+  "Album_Tracks": "Album Tracks",
+  "Open_spoti": "Open in Spotify",
+  "Description": "It is a web application that uses the Spotify API to search and play previews of songs by music artists and their albums, without registering with Spotify"
+}

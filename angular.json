@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SpotifyFinder": {
+    "SpotifyFinder-temp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/SpotifyFinder",
+            "outputPath": "dist/SpotifyFinder-temp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.sass"
             ],
             "scripts": []
@@ -72,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "SpotifyFinder:build:production"
+              "browserTarget": "SpotifyFinder-temp:build:production"
             },
             "development": {
-              "browserTarget": "SpotifyFinder:build:development"
+              "browserTarget": "SpotifyFinder-temp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SpotifyFinder:build"
+            "browserTarget": "SpotifyFinder-temp:build"
           }
         },
         "test": {
@@ -103,9 +104,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "SpotifyFinder"
+  "defaultProject": "SpotifyFinder-temp",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

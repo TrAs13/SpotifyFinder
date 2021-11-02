@@ -1,10 +1,10 @@
 <nav class="navbar">
-  <div class="navbar_project-name">SpotifyFinder</div>
-  <div class="navbar__list">
-    <a class="navbar__list_el" routerLink="/" routerLinkActive="active">Home</a>
-    <a class="navbar__list_el" routerLink="/about" routerLinkActive="active"
-      >About</a
-    >
-  </div>
+  <a class="navbar__project-name">SpotifyFinder</a>
+  <a class="navbar__about">{{ "About" | translate }}</a>
+  <button
+    class="button-language navbar__button-language"
+    (click)="changeLanguage()"
+  >
+    {{ "BUTTON" | translate }}
+  </button>
 </nav>
-<router-outlet></router-outlet>

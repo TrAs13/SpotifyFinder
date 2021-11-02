@@ -1,25 +1,11 @@
-<div class="artist" *ngIf="artist">
-  <div *ngIf="artist.images.length > 0">
-    <img class="artist__avatar" src="{{ artist.images[0].url }}" />
-  </div>
-  <h1>{{ artist.name }}</h1>
-  <p *ngIf="artist.genres.length > 0">
-    Genres: <span *ngFor="let genre of artist.genres">{{ genre }}</span>
-  </p>
-
-  <div class="artist__albums">
-    <div class="artist__albums-el" *ngFor="let album of albums">
-      <div *ngIf="album.images.length > 0">
-        <a routerLink="/album/{{ album.id }}">
-          <img class="artist__albums-img" src="{{ album.images[0].url }}" />
-        </a>
-        <div class="artist__albums-info">
-          <div class="artist__albums-name">{{ album.name }}</div>
-          <a class="artist__albums-ref" routerLink="/album/{{ album.id }}"
-            >Album Details</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="artist page__artist">
+  <img
+    class="artist__avatar"
+    alt="artist avatar"
+    src="https://i.scdn.co/image/ab6761610000e5eb5b7c16051e2ae6e7af405c45"
+  />
+  <h1>ATL</h1>
+  <p>{{ "Genres" | translate }} <span>Rock, Hiphop, Rap</span></p>
+  <h1>{{ "Albums" | translate }}</h1>
+  <app-artist-albums></app-artist-albums>
 </div>

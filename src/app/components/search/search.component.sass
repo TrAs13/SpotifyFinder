@@ -1,29 +1,10 @@
 @import '../../../styles'
+
+.page__search
+    margin: $primary-margin
+
 .search
-    margin: $margin-page
     &__input
-        line-height: 30px
+        height: 30px
         background: $primary-color
-        border-radius: $border-radius
-        width: 100%
-.artists
-    margin-top: $margin-page
-    display: grid
-    grid-gap: $margin-gap
-    &__artist
-        border-radius: $border-radius
-        background: black
-        padding: 5px $margin-page
-        display: grid
-        grid-auto-columns: 100px 1fr
-        align-items: center
-        grid-template-areas: "avatar info"
-        &-avatar
-            grid-area: "avatar"
-            width: 60px
-            height: 60px
-        &-info
-            grid-area: "info"
-        &-ref
-            color: white
-            text-decoration: none
+        width: 80%
